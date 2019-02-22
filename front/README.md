@@ -1,4 +1,4 @@
-# Ill work on the CSS and redoing the pages
+#### I'll work on the CSS and redoing the pages
 # This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
