@@ -30,3 +30,5 @@ jspm_packages
 # Optional npm cache directory
 .npm
 
+#ignore config / keys
+./config
