@@ -34,4 +34,4 @@ jspm_packages
 config
 
 #ignore client modules
-*/client/node_modules
+client/node_modules
