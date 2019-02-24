@@ -32,3 +32,6 @@ jspm_packages
 
 #ignore config / keys
 ./config
+
+#ignore client modules
+./client/node_modules
