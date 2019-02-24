@@ -9,5 +9,5 @@ export const greeting = function(message) {
 };
 
 export default {
-  port: env.PORT || 8080
+  port: env.PORT || 3001
 };
