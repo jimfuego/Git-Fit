@@ -9,7 +9,8 @@ const MongoClient = require("mongodb").MongoClient;
 const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
 var db;
-const url = "mongodb+srv://AB:Jimmyandabasiama1@cluster0-qqrwt.mongodb.net/DatabaseTest";
+const url = "mongodb+srv://AB:Jimmyandabasiama1@cluster3-qqrwt.mongodb.net/DatabaseTest";
+//const url="http://localhost:27017"
 
 // Use connect method to connect to the server
 MongoClient.connect(url, function(err, client) {
