@@ -10,8 +10,8 @@ function connect(callback) {
   //default port for mongo
   // const dbURI = process.env.MONGODB_URI || require("loginDetails.js");
   // var mdbUrl = "mongodb://localhost:27017";
-  const mdbUrl = "mongodb+srv://AB:Abasiamaandjimmy1@cluster5-qqrwt.mongodb.net/test?retryWrites=true";
-
+  //const mdbUrl = "mongodb+srv://AB:Abasiamaandjimmy1@cluster5-qqrwt.mongodb.net/DatabaseTest?retryWrites=true";
+const dbURI = process.env.MONGODB_URI || require("../../loginDetails.js");
   //create new MongoClient
   const client = new MongoClient(dbURI);
 
