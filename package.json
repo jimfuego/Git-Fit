@@ -4,7 +4,7 @@
   "description": "Assignment 2 5610 Akpan/Borzillieri",
   "main": "index.js",
   "scripts": {
-    "heroku-postbuild": "cd <react directory> && yarn install && yarn build",
+    "heroku-postbuild": "cd client && yarn install && yarn build",
     "start": "node server.js"
   },
   "engines": {
