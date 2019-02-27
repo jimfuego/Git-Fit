@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-// const keys = require("../../config/keys");
+const keys = require("../../config/keys");
 const MongoClient = require("mongodb").MongoClient;
 
 // Load input validation
@@ -10,7 +10,7 @@ const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
 var db;
 
-const dbURI = process.env.MONGODB_URI || require("loginDetails.js");
+const dbURI = process.env.MONGODB_URI || require("./loginDetails.js");
 //const url="http://localhost:27017"
 
 // Use connect method to connect to the server
