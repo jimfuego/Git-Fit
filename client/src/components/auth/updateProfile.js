@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { Route, Redirect } from 'react-router'
+import NavbarLanding from "../layout/NavbarLanding";
+
 
 class updateProfile extends Component {
   constructor() {
@@ -31,7 +33,7 @@ const newUser = {
 render() {
     const { errors } = this.state;
 return (
-      <div className="container">
+      /*<div className="container">
         <div className="row">
           <div className="col s8 offset-s2">
             <Link to="/" className="btn-flat waves-effect">
@@ -74,16 +76,57 @@ return (
                   }}
                   type="submit"
                   className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-                  onSubmit={this.handleonSubmit}
-
-                >
+                  onSubmit={this.handleonSubmit}>
                   Update Profile
                    </button>
               </div>
             </form>
           </div>
         </div>
+      </div>*/
+<div>
+<NavbarLanding/>
+<div className="background-update">
+  <div className="containernew">
+    <div className="row">
+      <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div className="card card-signin">
+          <div className="card-body">
+            <h5 className="card-title text-center">Update Profile</h5>
+            <form className="form-signin" onSubmit={this.handleonSubmit}>
+              <div className="form-label-group">
+                <input
+                onChange={this.onChange}
+                error={errors.Avgcaloriesperday}
+                type="number" 
+                id="inputAvgCaloriesperday" 
+                className="form-control" 
+                placeholder="Calories" 
+                required autoFocus/>
+                <label htmlFor="inputAvgCaloriesperday">Avg Calories/day</label>
+              </div>
+
+              <div className="form-label-group">
+                <input 
+                onChange={this.onChange}
+                error={errors.Weight}
+                type="number" 
+                id="inputWeight" 
+                className="form-control" 
+                placeholder="Weight" 
+                required autoFocus/>
+                <label htmlFor="inputWeight">Weight</label>
+              </div>
+              <button className="btn btn-lg btn-primary btn-block text-uppercase" 
+                      type="submit">Update Profile</button>
+            </form>
+          </div>
+        </div>
       </div>
+    </div>
+  </div>
+  </div>
+  </div>
     );
   }
 }

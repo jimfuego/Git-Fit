@@ -1,16 +1,40 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom'
-class Landing extends Component {
+//import Background from './gym.jpg';
+import '../../index.css';
+import NavbarLanding from "../layout/NavbarLanding";
+
+
+
+//console.log(gym); // /logo.84287d09.png
+
+/*function Header() {
+  // Import result is the URL of your image
+  return <img src={gym} alt="gym" />;
+} */
+/*var sectionStyle = {
+  width: "100%",
+  height: "400px",
+  backgroundImage: "url(" + { Background } + ")"
+};
+
+
+class Section extends Component {
   render() {
     return (
-      <div style={{ height: "75vh" }} className="container valign-wrapper">
+      <section style={ sectionStyle }>
+      </section>
+    );
+  }
+}*/
+
+class Landing extends Component {
+  /*render() {
+    return (
+      //<section style={ sectionStyle}>
+      <div className="container valign-wrapper">
         <div className="row">
           <div className="col s12 center-align">
-            <h4>
-              <b>Build</b> a login/auth app with the{" "}
-              <span style={{ fontFamily: "monospace" }}>MERN</span> stack from
-              scratch
-            </h4>
             <p className="flow-text grey-text text-darken-1">
               Create a (minimal) full-stack app with user authentication via
               passport and JWTs
@@ -40,7 +64,52 @@ class Landing extends Component {
           </div>
         </div>
       </div>
-    );
+     // </section>
+    );*/
+    render() {
+      return (
+              <div>
+              <NavbarLanding/>
+
+
+          <div className="bg-overlay row justify-content-center">
+
+
+          <center>
+
+
+          <div className="container">
+
+            <div className="row text-center  text-white top-buffer" >
+
+              <h1 class="h1class">
+              </h1>
+              <h1 class="h1-class" align="center">Discover that summer body you've been dreaming of<br/>
+            </h1>
+              <br/><br/>
+              </div>
+          <div className="button-toolbar">
+          <div class="row">
+
+            <div class="col-xl-6">
+                <Link className="btn btn-primary btn-lg col-lg-8"  to="/register">Register</Link>
+            </div>
+
+          <div class="col-xl-6">
+                <Link className="btn btn-primary btn-lg col-lg-8" to="/login">Login</Link>
+          </div>
+
+          </div>
+
+        </div>
+
+      </div>
+      </center>
+    </div>
+     </div>
+
+        );
+    
   }
 }
 export default Landing;

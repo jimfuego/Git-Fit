@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { Route, Redirect } from 'react-router'
+import NavbarLanding from "../layout/NavbarLanding";
+
 
 class Register extends Component {
   constructor() {
@@ -27,7 +29,7 @@ const newUser = {
     };
  axios
     .post('/api/users/register', newUser)
-    .then(res =>this.props.history.push('/'))
+    .then(res =>this.props.history.push('/createProfile'))
     .catch(err =>console.log(err)
     );
 
@@ -35,23 +37,23 @@ const newUser = {
 render() {
     const { errors } = this.state;
 return (
-      <div className="container">
-        <div className="row">
-          <div className="col s8 offset-s2">
-            <Link to="/" className="btn-flat waves-effect">
-              <i className="material-icons left">keyboard_backspace</i> Back to
+      /*<div classNameName="container">
+        <div classNameName="row">
+          <div classNameName="col s8 offset-s2">
+            <Link to="/" classNameName="btn-flat waves-effect">
+              <i classNameName="material-icons left">keyboard_backspace</i> Back to
               home
             </Link>
-            <div className="col s12" style={{ paddingLeft: "11.250px" }}>
+            <div classNameName="col s12" style={{ paddingLeft: "11.250px" }}>
               <h4>
                 <b>Register</b> below
               </h4>
-              <p className="grey-text text-darken-1">
+              <p classNameName="grey-text text-darken-1">
                 Already have an account? <Link to="/login">Log in</Link>
               </p>
               </div>
             <form noValidate onSubmit={this.onSubmit}>
-              <div className="input-field col s12">
+              <div classNameName="input-field col s12">
                 <input
                   onChange={this.onChange}
                   value={this.state.name}
@@ -61,7 +63,7 @@ return (
                 />
                 <label htmlFor="name">Name</label>
               </div>
-              <div className="input-field col s12">
+              <div classNameName="input-field col s12">
                 <input
                   onChange={this.onChange}
                   value={this.state.email}
@@ -71,7 +73,7 @@ return (
                 />
                 <label htmlFor="email">Email</label>
               </div>
-              <div className="input-field col s12">
+              <div classNameName="input-field col s12">
                 <input
                   onChange={this.onChange}
                   value={this.state.password}
@@ -81,7 +83,7 @@ return (
                 />
                 <label htmlFor="password">Password</label>
               </div>
-              <div className="input-field col s12">
+              <div classNameName="input-field col s12">
                 <input
                   onChange={this.onChange}
                   value={this.state.password2}
@@ -91,7 +93,7 @@ return (
                 />
                 <label htmlFor="password2">Confirm Password</label>
               </div>
-              <div className="col s12" style={{ paddingLeft: "11.250px" }}>
+              <div classNameName="col s12" style={{ paddingLeft: "11.250px" }}>
                 <button
                   style={{
                     width: "150px",
@@ -100,7 +102,7 @@ return (
                     marginTop: "1rem"
                   }}
                   type="submit"
-                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                  classNameName="btn btn-large waves-effect waves-light hoverable blue accent-3"
                   onSubmit={this.handleonSubmit}
 
                 >
@@ -110,7 +112,73 @@ return (
             </form>
           </div>
         </div>
+      </div>*/
+<div>
+<NavbarLanding/>
+<div className="background">
+  <div className="container">
+    <div className="row">
+      <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div className="card card-signin">
+          <div className="card-body">
+            <h5 className="card-title text-center">Register</h5>
+            <form className="form-signin" onSubmit={this.handleonSubmit}>
+              <div className="form-label-group">
+                <input
+                onChange={this.onChange}
+                error={errors.name}
+                type="name" 
+                id="inputName" 
+                className="form-control" 
+                placeholder="Name" 
+                required autoFocus/>
+                <label htmlFor="inputName">Name</label>
+              </div>
+
+              <div className="form-label-group">
+                <input 
+                onChange={this.onChange}
+                error={errors.email}
+                type="email" 
+                id="inputEmail" 
+                className="form-control" 
+                placeholder="Email" 
+                required autoFocus/>
+                <label htmlFor="inputEmail">Email</label>
+              </div>
+
+              <div className="form-label-group">
+                <input
+                onChange={this.onChange}
+                error={errors.password}
+                type="password" 
+                id="inputPassword" 
+                className="form-control" 
+                placeholder="Password" 
+                required autoFocus/>
+                <label htmlFor="inputPassword">Password</label>
+              </div>
+
+              <div className="form-label-group">
+                <input 
+                onChange={this.onChange}
+                error={errors.password}
+                type="password" 
+                id="inputPassword2" 
+                className="form-control" 
+                placeholder="Password" required autoFocus/>
+                <label htmlFor="inputPassword2">Confirm Password</label>
+              </div>
+              <button className="btn btn-lg btn-primary btn-block text-uppercase" 
+                      type="submit">Sign up</button>
+            </form>
+          </div>
+        </div>
       </div>
+    </div>
+  </div>
+  </div>
+  </div>
     );
   }
 }
