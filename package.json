@@ -4,7 +4,12 @@
   "description": "Assignment 2 5610 Akpan/Borzillieri",
   "main": "index.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "heroku-postbuild": "cd <react directory> && yarn install && yarn build",
+    "start": "node server.js"
+  },
+  "engines": {
+  "node": "10.15.0",
+  "yarn": "1.13.0"
   },
   "repository": {
     "type": "git",
