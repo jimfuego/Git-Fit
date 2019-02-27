@@ -1,38 +1,46 @@
 {
-  "name": "Git-Fit",
-  "version": "1.0.0",
+  "name": "a2-5610-working-merge",
+  "version": "0.0.0",
   "description": "Assignment 2 5610 Akpan/Borzillieri",
   "main": "index.js",
   "scripts": {
     "client-install": "npm install --prefix client",
-    "start": "node server.js",
-    "server": "nodemon server.js",
+    "start": "node app.js",
+    "server": "nodemon app.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abasiamaakpan/Fitness-App.git"
+    "url": "git+https://github.com/jimfuego/Git-Fit.git"
   },
   "author": "Abasiama Akpan / James Borzillieri",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/abasiamaakpan/Fitness-App/issues"
+    "url": "https://github.com/jimfuego/Git-Fit/issues"
   },
-  "homepage": "https://github.com/abasiamaakpan/Fitness-App#readme",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "homepage": "https://github.com/jimfuego/Git-Fit#readme",
   "dependencies": {
     "axios": "^0.18.0",
     "babel-eslint": "9.0.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "classnames": "^2.2.6",
+    "cookie-parser": "~1.4.3",
     "concurrently": "^4.1.0",
     "custom-env": "^1.0.0",
+    "debug": "~2.6.9",
     "express": "^4.16.4",
+    "http-errors": "~1.6.2",
     "is-empty": "^1.2.0",
+    "jade": "~1.11.0",
     "jsonwebtoken": "^8.5.0",
     "jwt-decode": "^2.2.0",
     "mongodb": "^3.1.13",
+    "morgan": "~1.9.0",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "pm2": "^3.3.1",
