@@ -146,22 +146,6 @@ router.get("/getUser", function(req,res,next) {
 });
 
 /*
-API for getting user BMI
-*/
-// router.get("/getBmi", function(req, res, next){
-//   if(req.session.user){
-//     getUserInfo(
-//       { Name: req.session.user.userName },
-//       { CurrentWeight: 1, CurrentHeight: 1},
-//       function(result) {
-//         console.log("retrieving BMI for " + req.session.user.username);
-//         res.send(result.weight / result.height * result.height);
-//       }
-//     );
-//   } else { throw err; }
-// });
-
-/*
 Test APIs*/
 router.get("/dbTest", function(req,res,next) {
   console.log("DB Testing...");
