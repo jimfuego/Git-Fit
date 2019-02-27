@@ -30,7 +30,7 @@ const userData = {
     };
      axios
     .post('/api/users/login', userData)
-    .then(res =>this.props.history.push('/'))
+    .then(res =>this.props.history.push('/updateProfile'))
     .catch(err =>console.log(err)
     );
 console.log(userData);
@@ -110,13 +110,13 @@ return (
             <input class="input100" type="password" name="pass" placeholder="Type your password"/>
             <span class="focus-input100" data-symbol="&#xf190;"></span>
           </div>
-          
+
           <div class="text-right p-t-8 p-b-31">
             <Link to="#">
               Forgot password?
             </Link>
           </div>
-          
+
           <div class="container-login100-form-btn">
             <div class="wrap-login100-form-btn">
               <div class="login100-form-bgbtn"></div>
@@ -168,34 +168,34 @@ return (
         <div class="card card-signin ">
           <div class="card-body">
             <h5 class="card-title text-center">Login</h5>
-            <form class="form-signin" onSubmit={this.handleonSubmit}>
+            <form class="form-signin" onSubmit={this.onSubmit}>
               <div class="form-label-group">
                 <input onChange={this.onChange}
                         error={errors.email}
-                        type="email" 
-                        id="inputEmail" 
-                        class="form-control" 
-                        placeholder="Email address" 
+                        type="email"
+                        id="email"
+                        class="form-control"
+                        placeholder="Email address"
                         required autofocus/>
-                <label for="inputEmail">Email address</label>
+                <label for="email">Email address</label>
               </div>
 
               <div class="form-label-group">
                 <input onChange={this.onChange}
                        error={errors.password}
-                       type="password" 
-                       id="inputPassword" 
-                       class="form-control" 
-                       placeholder="Password" 
-                       required autofucus/>
-                <label for="inputPassword">Password</label>
+                       type="password"
+                       id="password"
+                       class="form-control"
+                       placeholder="Password"
+                       required autofocus/>
+                <label for="password">Password</label>
               </div>
 
               <div class="custom-control custom-checkbox mb-3">
                 <input type="checkbox" class="custom-control-input" id="customCheck1"/>
                 <label class="custom-control-label" for="customCheck1">Remember password</label>
               </div>
-              <button class="btn btn-lg btn-primary btn-block text-uppercase" 
+              <button class="btn btn-lg btn-primary btn-block text-uppercase"
                       type="submit">Sign in</button>
             </form>
           </div>
@@ -205,7 +205,7 @@ return (
   </div>
   </div>
   </div>
-  
+
     );
   }
 }

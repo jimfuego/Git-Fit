@@ -72,7 +72,7 @@ const { errors, isValid } = validateLoginInput(req.body);
   if (!isValid) {
     return res.status(400).json(errors);
   }
-const email = req.body.email;
+  const email = req.body.email;
   const password = req.body.password;
 // Find user by email
   db.collection("CollectionTest").findOne({ email: email }).then(function(user) {
@@ -89,7 +89,6 @@ const email = req.body.email;
           id: user.id,
           name: user.name
         };
-        // FIXME: create session
         req.session.user = user;
 // Sign token
         // jwt.sign(

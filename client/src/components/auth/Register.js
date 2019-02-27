@@ -4,7 +4,6 @@ import axios from 'axios';
 import { Route, Redirect } from 'react-router'
 import NavbarLanding from "../layout/NavbarLanding";
 
-
 class Register extends Component {
   constructor() {
     super();
@@ -20,7 +19,6 @@ onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
   };
 onSubmit = e => {
-  debugger;
     e.preventDefault();
 const newUser = {
       name: this.state.name,
