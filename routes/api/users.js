@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const keys = require("../../config/keys");
+const keys = require("../../loginDetails");
 const MongoClient = require("mongodb").MongoClient;
 
 // Load input validation
@@ -12,7 +12,7 @@ var db;
 
 // const dbURI = process.env.MONGODB_URI || require("./loginDetails.js");
 // const dbURI="http://localhost:27017";
-const dbURI = "mongodb+srv://AB:Abasiamaandjimmy1@cluster5-qqrwt.mongodb.net/test?retryWrites=true";
+const dbURI = "mongodb+srv://AB:Abasiamaandjimmy1@cluster5-qqrwt.mongodb.net/DatabaseTest?retryWrites=true";
 
 // Use connect method to connect to the server
 MongoClient.connect(dbURI, function(err, client) {
@@ -93,19 +93,19 @@ const { errors, isValid } = validateLoginInput(req.body);
         };
         req.session.user = user;
 // Sign token
-        // jwt.sign(
-        //   payload,
-        //   keys.secretOrKey,
-        //   {
-        //     expiresIn: 31556926 // 1 year in seconds
-        //   },
-        //   (err, token) => {
-        //     res.json({
-        //       success: true,
-        //       token: "Bearer " + token
-        //     });
-        //   }
-        // );
+         jwt.sign(
+           payload,
+           keys.secretOrKey,
+           {
+             expiresIn: 31556926 // 1 year in seconds
+           },
+           (err, token) => {
+             res.json({
+               success: true,
+               token: "Bearer " + token
+             });
+          }
+         );
       } else {
         return res
           .status(400)
