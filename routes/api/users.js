@@ -9,11 +9,12 @@ const MongoClient = require("mongodb").MongoClient;
 const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
 var db;
-const url = "mongodb+srv://AB:Abasiamaandjimmy1@cluster5-qqrwt.mongodb.net/DatabaseTest?retryWrites=true";
+
+const dbURI = process.env.MONGODB_URI || require("loginDetails.js");
 //const url="http://localhost:27017"
 
 // Use connect method to connect to the server
-MongoClient.connect(url, function(err, client) {
+MongoClient.connect(dbURI, function(err, client) {
 
   if (err) {
     console.error(err);

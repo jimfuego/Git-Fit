@@ -38,3 +38,6 @@ config
 
 #ignore client modules
 client/node_modules
+
+#login string
+loginDetails.js

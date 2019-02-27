@@ -6,10 +6,6 @@ import '../../index.css';
 //import '../../util.css';
 import NavbarLanding from "../layout/NavbarLanding";
 
-
-
-
-
 class Login extends Component {
   constructor() {
     super();

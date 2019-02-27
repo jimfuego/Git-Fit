@@ -8,10 +8,10 @@ function connect(callback) {
   //import mongo driver
   var MongoClient = require("mongodb").MongoClient;
   //default port for mongo
-  var mdbUrl = "mongodb+srv://AB:Abasiamaandjimmy1@cluster5-qqrwt.mongodb.net/DatabaseTest?retryWrites=true";
+  const dbURI = process.env.MONGODB_URI || require("loginDetails.js");
   //var mdbUrl = "mongodb://localhost:27017";
   //create new MongoClient
-  var client = new MongoClient(mdbUrl);
+  var client = new MongoClient(dbURI);
 
   //connect to client
   client.connect(function (err) {
