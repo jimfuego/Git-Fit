@@ -20,6 +20,7 @@ onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
   };
 onSubmit = e => {
+  debugger;
     e.preventDefault();
 const newUser = {
       Age: this.state.Age,
@@ -28,8 +29,8 @@ const newUser = {
       Weight: this.state.Weight
     };
  axios
-    .post('/api/users/createProfile', newUser)
-    .then(res =>this.props.history.push('/Profile'))
+    .post('/api/index/initUser', newUser)
+    .then(res => { debugger; this.props.history.push('/Profile')})
     .catch(err =>console.log(err)
     );
 
@@ -119,31 +120,31 @@ return (
         <div className="card card-signin">
           <div className="card-body">
             <h5 className="card-title text-center">Create Profile</h5>
-            <form className="form-signin" onSubmit={this.handleonSubmit}>
+            <form className="form-signin" onSubmit={this.onSubmit}>
               <div className="form-label-group">
                 <input
                 onChange={this.onChange}
                 error={errors.Age}
                 //value={this.state.Age}
-                type="number" 
-                id="inputAge" 
-                className="form-control" 
-                placeholder="Age" 
+                type="number"
+                id="Age"
+                className="form-control"
+                placeholder="Age"
                 required autoFocus/>
-                <label htmlFor="inputAge">Age</label>
+                <label htmlFor="Age">Age</label>
               </div>
 
               <div className="form-label-group">
-                <input 
+                <input
                 onChange={this.onChange}
                 error={errors.Avgcaloriesperday}
                 //value={this.state.Avgcaloriesperday}
-                type="number" 
-                id="inputAvgcaloriesperday" 
-                className="form-control" 
-                placeholder="AvgCalories/day" 
+                type="number"
+                id="Avgcaloriesperday"
+                className="form-control"
+                placeholder="AvgCalories/day"
                 required autoFocus/>
-                <label htmlFor="inputAvgcaloriesperday">Avg Calories/day</label>
+                <label htmlFor="Avgcaloriesperday">Avg Calories/day</label>
               </div>
 
               <div className="form-label-group">
@@ -151,27 +152,27 @@ return (
                 onChange={this.onChange}
                 error={errors.Height}
                 //value={this.state.Weight}
-                type="number" 
-                id="inputHeight" 
-                className="form-control" 
-                placeholder="Height" 
+                type="number"
+                id="Height"
+                className="form-control"
+                placeholder="Height"
                 required autoFocus/>
-                <label htmlFor="inputHeight">Height</label>
+                <label htmlFor="Height">Height</label>
               </div>
 
               <div className="form-label-group">
-                <input 
+                <input
                 onChange={this.onChange}
                 error={errors.password}
                 //value={this.state.Weight}
-                type="number" 
-                id="inputWeight" 
-                className="form-control" 
-                placeholder="Weight" 
+                type="number"
+                id="Weight"
+                className="form-control"
+                placeholder="Weight"
                 required autoFocus/>
-                <label htmlFor="inputWeight">Weight</label>
+                <label htmlFor="Weight">Weight</label>
               </div>
-              <button className="btn btn-lg btn-primary btn-block text-uppercase" 
+              <button className="btn btn-lg btn-primary btn-block text-uppercase"
                       type="submit">Sign up</button>
             </form>
           </div>

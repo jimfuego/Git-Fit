@@ -46,10 +46,6 @@ code {
 	text-align: center;
 }
 
-.profile{
-	background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("/img/gym7.jpg");
-    background-repeat: no-repeat;
-}
 
 .text-white{
 	color: white;
@@ -58,7 +54,7 @@ code {
 .text-justify {
   text-align: justify;
 }
-.top-buffer { 
+.top-buffer {
 	margin-top: 250px;
 
 }
@@ -72,19 +68,22 @@ code {
     	height: 1000px;
 
 }
-
-.container-login100{
-    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("/img/gym.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    color: #fff;
-    height: 1000px;
-    padding-top: 50px;
- }
+.profile-new{
+		background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("/img/gym2.jpg");
+    	height: 1000px;
+}
  .background-update{
  		background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("/img/gym5.jpg");
     	height: 1000px;
+
+ }
+
+ .table-responsive{
+ 		margin-top: 250px;
+
+ 	 margin-left:15%;
+    margin-right:15%;
+ 	  width: 70%;
 
  }
 
@@ -213,5 +212,3 @@ margin-top: 200px;
   color: white;
   background-color: #3b5998;
 }
-
-

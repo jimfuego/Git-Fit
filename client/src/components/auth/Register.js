@@ -20,6 +20,7 @@ onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
   };
 onSubmit = e => {
+  debugger;
     e.preventDefault();
 const newUser = {
       name: this.state.name,
@@ -122,54 +123,54 @@ return (
         <div className="card card-signin">
           <div className="card-body">
             <h5 className="card-title text-center">Register</h5>
-            <form className="form-signin" onSubmit={this.handleonSubmit}>
+            <form className="form-signin" onSubmit={this.onSubmit}>
               <div className="form-label-group">
                 <input
                 onChange={this.onChange}
                 error={errors.name}
-                type="name" 
-                id="inputName" 
-                className="form-control" 
-                placeholder="Name" 
+                type="name"
+                id="name"
+                className="form-control"
+                placeholder="Name"
                 required autoFocus/>
-                <label htmlFor="inputName">Name</label>
+                <label htmlFor="name">Name</label>
               </div>
 
               <div className="form-label-group">
-                <input 
+                <input
                 onChange={this.onChange}
                 error={errors.email}
-                type="email" 
-                id="inputEmail" 
-                className="form-control" 
-                placeholder="Email" 
+                type="email"
+                id="email"
+                className="form-control"
+                placeholder="Email"
                 required autoFocus/>
-                <label htmlFor="inputEmail">Email</label>
+                <label htmlFor="email">Email</label>
               </div>
 
               <div className="form-label-group">
                 <input
                 onChange={this.onChange}
                 error={errors.password}
-                type="password" 
-                id="inputPassword" 
-                className="form-control" 
-                placeholder="Password" 
+                type="password"
+                id="password"
+                className="form-control"
+                placeholder="Password"
                 required autoFocus/>
-                <label htmlFor="inputPassword">Password</label>
+                <label htmlFor="password">Password</label>
               </div>
 
               <div className="form-label-group">
-                <input 
+                <input
                 onChange={this.onChange}
                 error={errors.password}
-                type="password" 
-                id="inputPassword2" 
-                className="form-control" 
+                type="password"
+                id="password2"
+                className="form-control"
                 placeholder="Password" required autoFocus/>
-                <label htmlFor="inputPassword2">Confirm Password</label>
+                <label htmlFor="password2">Confirm Password</label>
               </div>
-              <button className="btn btn-lg btn-primary btn-block text-uppercase" 
+              <button className="btn btn-lg btn-primary btn-block text-uppercase"
                       type="submit">Sign up</button>
             </form>
           </div>
