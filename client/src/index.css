@@ -46,6 +46,10 @@ code {
 	text-align: center;
 }
 
+.profile{
+	background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("/img/gym7.jpg");
+    background-repeat: no-repeat;
+}
 
 .text-white{
 	color: white;
