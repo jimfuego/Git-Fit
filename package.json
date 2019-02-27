@@ -2,7 +2,7 @@
   "name": "Git-Fit",
   "version": "0.0.0",
   "description": "Assignment 2 5610 Akpan/Borzillieri",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "heroku-postbuild": "cd client && yarn install && yarn build",
     "start": "node app.js"
