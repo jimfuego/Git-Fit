@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const keys = require("../../loginDetails");
+//const keys = require("../../loginDetails");
 const MongoClient = require("mongodb").MongoClient;
 
 // Load input validation
@@ -10,9 +10,9 @@ const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
 var db;
 
-// const dbURI = process.env.MONGODB_URI || require("./loginDetails.js");
+ const dbURI = process.env.MONGODB_URI || require("../../loginDetails.js");
 // const dbURI="http://localhost:27017";
-const dbURI = "mongodb+srv://AB:Abasiamaandjimmy1@cluster5-qqrwt.mongodb.net/DatabaseTest?retryWrites=true";
+//const dbURI = "mongodb+srv://AB:Abasiamaandjimmy1@cluster5-qqrwt.mongodb.net/DatabaseTest?retryWrites=true";
 
 // Use connect method to connect to the server
 MongoClient.connect(dbURI, function(err, client) {
