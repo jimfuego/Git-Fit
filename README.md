@@ -1,5 +1,5 @@
 # [Git-Fit](https://safe-refuge-35344.herokuapp.com/)
-Assignment 2 Borzillieri/Akpan
+Git-Fit is an online application that allows users to input and track their fitness goals. Currently in it's beta, the people here at Git-Fit look to expand on this application to allow users to track their progress and their health over time with help of the features pending realease throughout the next year. Git-Fit today!
 
 ## Preview
 
