@@ -39,4 +39,4 @@ Demo can be found [here]()
 Slides can be found [here]()
 
 ## Copyright and License
-Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-resume/blob/gh-pages/LICENSE) license.
+Code released under the [MIT](https://github.com/facebook/react/blob/master/LICENSE) license.
