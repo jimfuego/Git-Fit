@@ -1,21 +1,29 @@
 # [Git-Fit](https://safe-refuge-35344.herokuapp.com/)
 Assignment 2 Borzillieri/Akpan
 
-
-
 ## Preview
 
-![App Preview]() 
+![App Preview](https://github.com/jimfuego/Git-Fit/client/public/img/gym.jpg) 
 
 **[View Live Preview](https://safe-refuge-35344.herokuapp.com/)**
 
 ## Tech Requirements
+MongoDB
+Express
+React
+Node.js
+HTML
+CSS
+Javascript
+
+
+
 
 
 
 ## Download, Installation and Usage
 1. Clone the repository on your device
-2. Make sure to have 
+2. Make sure to have node, express and  
 
 **OR**
 
