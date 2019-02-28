@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import axios from 'axios';
-import { Route, Redirect } from 'react-router'
 import NavbarLanding from "../layout/NavbarLanding";
 
 
@@ -20,7 +18,7 @@ onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
   };
 onSubmit = e => {
-  debugger;
+  
     e.preventDefault();
 const newUser = {
       Age: this.state.Age,
@@ -30,7 +28,7 @@ const newUser = {
     };
  axios
     .post('/api/index/initUser', newUser)
-    .then(res => { debugger; this.props.history.push('/Profile')})
+    .then(res => {  this.props.history.push('/Profile')})
     .catch(err =>console.log(err)
     );
 
@@ -163,7 +161,7 @@ return (
               <div className="form-label-group">
                 <input
                 onChange={this.onChange}
-                error={errors.password}
+                error={errors.Weight}
                 //value={this.state.Weight}
                 type="number"
                 id="Weight"

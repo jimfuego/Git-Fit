@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import axios from 'axios';
-import { Route, Redirect } from 'react-router'
 import NavbarLanding from "../layout/NavbarLanding";
 
 class Register extends Component {

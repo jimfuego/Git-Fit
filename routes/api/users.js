@@ -93,7 +93,7 @@ const { errors, isValid } = validateLoginInput(req.body);
         };
         req.session.user = user;
 // Sign token
-         jwt.sign(
+         /*jwt.sign(
            payload,
            keys.secretOrKey,
            {
@@ -105,7 +105,8 @@ const { errors, isValid } = validateLoginInput(req.body);
                token: "Bearer " + token
              });
           }
-         );
+         );*/
+         res.json(payload);
       } else {
         return res
           .status(400)

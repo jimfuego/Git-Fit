@@ -82,20 +82,20 @@ class Landing extends Component {
 
             <div className="row text-center  text-white top-buffer" >
 
-              <h1 class="h1class">
+              <h1 className="h1class">
               </h1>
-              <h1 class="h1-class" align="center">Discover that summer body you've been dreaming of<br/>
+              <h1 className="h1-class" align="center">Discover that summer body you've been dreaming of<br/>
             </h1>
               <br/><br/>
               </div>
           <div className="button-toolbar">
-          <div class="row">
+          <div className="row">
 
-            <div class="col-xl-6">
+            <div className="col-xl-6">
                 <Link className="btn btn-primary btn-lg col-lg-8"  to="/register">Register</Link>
             </div>
 
-          <div class="col-xl-6">
+          <div className="col-xl-6">
                 <Link className="btn btn-primary btn-lg col-lg-8" to="/login">Login</Link>
           </div>
 

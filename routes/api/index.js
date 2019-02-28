@@ -1,12 +1,27 @@
 var express = require('express');
 var router = express.Router();
-
+var MongoClient = require("mongodb").MongoClient;
 /*
 Basic connection function.
 */
+var db;
+const dbURI = process.env.MONGODB_URI || require("../../loginDetails.js");
+// const dbURI="http://localhost:27017";
+//const dbURI = "mongodb+srv://AB:Abasiamaandjimmy1@cluster5-qqrwt.mongodb.net/DatabaseTest?retryWrites=true";
+
+// Use connect method to connect to the server
+MongoClient.connect(dbURI, function(err, client) {
+
+  if (err) {
+    console.error(err);
+  } else {
+    db = client.db("DatabaseTest");
+  }
+});
+
 function connect(callback) {
   //import mongo driver
-  var MongoClient = require("mongodb").MongoClient;
+  
   //default port for mongo
   // const dbURI = process.env.MONGODB_URI || require("loginDetails.js");
   // var mdbUrl = "mongodb://localhost:27017";
@@ -15,17 +30,11 @@ const dbURI = process.env.MONGODB_URI || require("../../loginDetails.js");
   //create new MongoClient
   const client = new MongoClient(dbURI);
 
-  //connect to client
-  client.connect(function (err) {
-    if (err !== null) throw err;
-    //get database
-    var db = client.db("DatabaseTest");
-    //get collection
+
     var collection = db.collection("CollectionTest");
     //pass collection and client to operation and log success
     console.log("Connected!");
     callback(collection, client);
-  });
 }
 
 /*
@@ -91,7 +100,7 @@ router.post("/initUser", function(req,res,next) {
                "CurrentWeight": req.body.Weight ,
                "CurrentCals": req.body.Avgcaloriesperday }},
                function(result) {
-                 console.log("User" + req.body.Name + "successfully updated!");
+                 console.log("User" + req.body.Name + "successfully initialized!");
                  res.send(result);
                }
     );
@@ -106,12 +115,12 @@ API for userUpdate functionality
 router.post("/updateUser", function(req,res,next) {
   if(req.session.user) {
     updateUser(
-      { "name": req.session.user.Name },
-      { $set: {"CurrentWeight": req.body.CurrentWeight ,
-               "CurrentCals": req.body.CurrentCals }},
-               function(res) {
-                 console.log("User" + req.session.user.Name + "successfully updated!");
-                 res.send(res);
+      { "name": req.session.user.name },
+      { $set: {"CurrentWeight": req.body.Weight ,
+               "CurrentCals": req.body.Avgcaloriesperday}},
+               function(result) {
+                 console.log("User" + req.body.Name + "successfully updated!");
+                 res.send(result);
                }
     );
   } else {
@@ -122,8 +131,8 @@ router.post("/updateUser", function(req,res,next) {
 /*
 Provides functionality for getter APIs
 */
-function getUserInfo(user, callback) {
-  if(req.session.user) {
+function getUser(user, callback) {
+  
   connect(function(collection, client) {
     collection.findOne(user, function(err, res) {
       if (err !== null) throw err;
@@ -131,20 +140,22 @@ function getUserInfo(user, callback) {
       callback(res);
     });
   });
-} else { throw err; }
+
 }
 
 /*
 API for retrieving user profile data.
 */
 router.get("/getUser", function(req,res,next) {
-  getUserInfo(
-    { Name: req.session.user.Name },
+  if(req.session.user) {
+  getUser(
+    { name: req.session.user.name },
     function(result) {
       console.log("Retrieving user info for " + req.session.user.Name);
       res.send(result);
     }
   );
+  } else { throw err; }
 });
 
 /*

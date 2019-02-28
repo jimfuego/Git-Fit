@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import axios from 'axios';
-import { Route, Redirect } from 'react-router'
 import NavbarLanding from "../layout/NavbarLanding";
 
 
@@ -24,9 +22,9 @@ const newUser = {
       Weight: this.state.Weight
     };
  axios
-    .post('/api/users/updateProfile', newUser)
-    .then(res =>this.props.history.push('/Profile'))
-    .catch(err =>console.log(err)
+    .post('/api/index/updateUser', newUser)
+    .then(res => this.props.history.push('/Profile'))
+    .catch(err => console.log(err)
     );
 
   };
@@ -93,17 +91,17 @@ return (
         <div className="card card-signin">
           <div className="card-body">
             <h5 className="card-title text-center">Update Profile</h5>
-            <form className="form-signin" onSubmit={this.handleonSubmit}>
+            <form className="form-signin" onSubmit={this.onSubmit}>
               <div className="form-label-group">
                 <input
                 onChange={this.onChange}
                 error={errors.Avgcaloriesperday}
                 type="number" 
-                id="inputAvgCaloriesperday" 
+                id="Avgcaloriesperday" 
                 className="form-control" 
-                placeholder="Calories" 
+                placeholder="Calories/day" 
                 required autoFocus/>
-                <label htmlFor="inputAvgCaloriesperday">Avg Calories/day</label>
+                <label htmlFor="Avgcaloriesperday">Avg Calories/day</label>
               </div>
 
               <div className="form-label-group">
@@ -111,11 +109,11 @@ return (
                 onChange={this.onChange}
                 error={errors.Weight}
                 type="number" 
-                id="inputWeight" 
+                id="Weight" 
                 className="form-control" 
                 placeholder="Weight" 
                 required autoFocus/>
-                <label htmlFor="inputWeight">Weight</label>
+                <label htmlFor="Weight">Weight</label>
               </div>
               <button className="btn btn-lg btn-primary btn-block text-uppercase" 
                       type="submit">Update Profile</button>

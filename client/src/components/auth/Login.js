@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import axios from 'axios';
 import '../../index.css';
 //import '../../main.css';
@@ -29,7 +28,6 @@ const userData = {
     .then(res =>this.props.history.push('/updateProfile'))
     .catch(err =>console.log(err)
     );
-console.log(userData);
   };
 render() {
     const { errors } = this.state;
@@ -58,7 +56,7 @@ return (
                   id="email"
                   type="email"
                 />
-                <label htmlFor="email">Email</label>
+                <label htmlhtmlFor="email">Email</label>
               </div>
               <div className="input-field col s12">
                 <input
@@ -68,7 +66,7 @@ return (
                   id="password"
                   type="password"
                 />
-                <label htmlFor="password">Password</label>
+                <label htmlhtmlFor="password">Password</label>
               </div>
               <div className="col s12" style={{ paddingLeft: "11.250px" }}>
                 <button
@@ -88,66 +86,66 @@ return (
           </div>
         </div>
       </div>*/
-/*    <div class="container-login100">
-      <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-        <form class="login100-form validate-form">
-          <span class="login100-form-title p-b-49">
+/*    <div className="container-login100">
+      <div className="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+        <form className="login100-form validate-form">
+          <span className="login100-form-title p-b-49">
             Login
           </span>
 
-          <div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
-            <span class="label-input100">Username</span>
-            <input class="input100" type="text" name="username" placeholder="Type your username"/>
-            <span class="focus-input100" data-symbol="&#xf206;"></span>
+          <div className="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
+            <span className="label-input100">Username</span>
+            <input className="input100" type="text" name="username" placeholder="Type your username"/>
+            <span className="focus-input100" data-symbol="&#xf206;"></span>
           </div>
 
-          <div class="wrap-input100 validate-input" data-validate="Password is required">
-            <span class="label-input100">Password</span>
-            <input class="input100" type="password" name="pass" placeholder="Type your password"/>
-            <span class="focus-input100" data-symbol="&#xf190;"></span>
+          <div className="wrap-input100 validate-input" data-validate="Password is required">
+            <span className="label-input100">Password</span>
+            <input className="input100" type="password" name="pass" placeholder="Type your password"/>
+            <span className="focus-input100" data-symbol="&#xf190;"></span>
           </div>
 
-          <div class="text-right p-t-8 p-b-31">
+          <div className="text-right p-t-8 p-b-31">
             <Link to="#">
               Forgot password?
             </Link>
           </div>
 
-          <div class="container-login100-form-btn">
-            <div class="wrap-login100-form-btn">
-              <div class="login100-form-bgbtn"></div>
-              <button class="login100-form-btn">
+          <div className="container-login100-form-btn">
+            <div className="wrap-login100-form-btn">
+              <div className="login100-form-bgbtn"></div>
+              <button className="login100-form-btn">
                 Login
               </button>
             </div>
           </div>
 
-          <div class="txt1 text-center p-t-54 p-b-20">
+          <div className="txt1 text-center p-t-54 p-b-20">
             <span>
               Or Sign Up Using
             </span>
           </div>
 
-          <div class="flex-c-m">
-            <Link to="#" class="login100-social-item bg1">
-              <i class="fa fa-facebook"></i>
+          <div className="flex-c-m">
+            <Link to="#" className="login100-social-item bg1">
+              <i className="fa fa-facebook"></i>
             </Link>
 
-            <Link to="#" class="login100-social-item bg2">
-              <i class="fa fa-twitter"></i>
+            <Link to="#" className="login100-social-item bg2">
+              <i className="fa fa-twitter"></i>
             </Link>
 
-            <Link to="#" class="login100-social-item bg3">
-              <i class="fa fa-google"></i>
+            <Link to="#" className="login100-social-item bg3">
+              <i className="fa fa-google"></i>
             </Link>
           </div>
 
-          <div class="flex-col-c p-t-155">
-            <span class="txt1 p-b-17">
+          <div className="flex-col-c p-t-155">
+            <span className="txt1 p-b-17">
               Or Sign Up Using
             </span>
 
-            <Link to="#" class="txt2">
+            <Link to="#" className="txt2">
               Sign Up
             </Link>
           </div>
@@ -157,41 +155,41 @@ return (
   </div>*/
   <div>
   <NavbarLanding/>
-  <div class="background">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-        <div class="card card-signin ">
-          <div class="card-body">
-            <h5 class="card-title text-center">Login</h5>
-            <form class="form-signin" onSubmit={this.onSubmit}>
-              <div class="form-label-group">
+  <div className="background">
+  <div className="container">
+    <div className="row">
+      <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div className="card card-signin ">
+          <div className="card-body">
+            <h5 className="card-title text-center">Login</h5>
+            <form className="form-signin" onSubmit={this.onSubmit}>
+              <div className="form-label-group">
                 <input onChange={this.onChange}
                         error={errors.email}
                         type="email"
                         id="email"
-                        class="form-control"
+                        className="form-control"
                         placeholder="Email address"
-                        required autofocus/>
-                <label for="email">Email address</label>
+                        required autoFocus/>
+                <label htmlFor="email">Email address</label>
               </div>
 
-              <div class="form-label-group">
+              <div className="form-label-group">
                 <input onChange={this.onChange}
                        error={errors.password}
                        type="password"
                        id="password"
-                       class="form-control"
+                       className="form-control"
                        placeholder="Password"
-                       required autofocus/>
-                <label for="password">Password</label>
+                       required autoFocus/>
+                <label htmlFor="password">Password</label>
               </div>
 
-              <div class="custom-control custom-checkbox mb-3">
-                <input type="checkbox" class="custom-control-input" id="customCheck1"/>
-                <label class="custom-control-label" for="customCheck1">Remember password</label>
+              <div className="custom-control custom-checkbox mb-3">
+                <input type="checkbox" className="custom-control-input" id="customCheck1"/>
+                <label className="custom-control-label" htmlFor="customCheck1">Remember password</label>
               </div>
-              <button class="btn btn-lg btn-primary btn-block text-uppercase"
+              <button className="btn btn-lg btn-primary btn-block text-uppercase"
                       type="submit">Sign in</button>
             </form>
           </div>

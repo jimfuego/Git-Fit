@@ -32,12 +32,12 @@ export default class Profile extends Component {
 
   componentDidMount(){
     axios
-    .get("/api/index/getUserInfo")
+    .get("/api/index/getUser")
     .then(res => {
         this.setState({StartBMI: parseInt(res.data.Height)/parseInt(res.data.StartWeight),
                       CurrentBMI: parseInt(res.data.Height)/parseInt(res.data.CurrentWeight),
-                      StartAvgcaloriesperday: parseInt(res.data.StartAvgcaloriesperday),
-                      CurrentAvgcaloriesperday: parseInt(res.data.CurrentAvgcaloriesperday),
+                      StartCals: parseInt(res.data.StartCals),
+                      CurrentCals: parseInt(res.data.CurrentCals),
                       StartWeight:parseInt(res.data.StartWeight),
                       CurrentWeight: parseInt(res.data.CurrentWeight)});
 });
