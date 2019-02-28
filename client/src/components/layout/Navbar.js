@@ -25,7 +25,7 @@ render() {
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <ul className="navbar-nav mr-auto">
       <li className="nav-item active">
-        <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
+        <Link className="nav-link" to="/Profile">Home <span className="sr-only">(current)</span></Link>
       </li>
     </ul>
     <div className="pos-f-t">
@@ -46,29 +46,3 @@ render() {
 }
 
 export default NavBar;
-
-/*import React, { Component } from "react";
-import { Link } from "react-router-dom";
-class Navbar extends Component {
-  render() {
-    return (
-      <div className="navbar-fixed">
-        <nav className="z-depth-0">
-          <div className="nav-wrapper white">
-            <Link
-              className="/"
-              style={{
-                fontFamily: "monospace"
-              }}
-              className="col s5 brand-logo center black-text"
-            >
-              <i className="material-icons">code</i>
-              MERN
-            </Link>
-          </div>
-        </nav>
-      </div>
-    );
-  }
-}
-export default Navbar;*/

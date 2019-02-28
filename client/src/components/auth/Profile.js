@@ -22,14 +22,6 @@ export default class Profile extends Component {
   }
 
 
-/*componentDidMount() {
-    axios.get("/getBMI/{this.props.Avgcaloriesperday}")
-      .then(res => {
-        const posts = res.data.data.children.map(obj => obj.data);
-        this.setState({ posts });
-      });
-  }*/
-
   componentDidMount(){
     axios
     .get("/api/index/getUser")
