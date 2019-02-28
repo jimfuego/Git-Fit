@@ -3,7 +3,7 @@ Assignment 2 Borzillieri/Akpan
 
 ## Preview
 
-![App Preview](https://safe-refuge-35344.herokuapp.com/client/public/img/gym.jpg) 
+![App Preview](Git-Fit/client/public/img/gym.jpg) 
 
 **[View Live Preview](https://safe-refuge-35344.herokuapp.com/)**
 
@@ -17,13 +17,11 @@ CSS
 Javascript
 
 
-
-
-
-
 ## Download, Installation and Usage
 1. Clone the repository on your device
-2. Make sure to have node, express and  
+2. Make sure to have node, express and react installed. To install node.js go [here](https://nodejs.org/en/). To install express, go [here](https://expressjs.com/en/starter/installing.html) and to play around with react go [here](https://reactjs.org/docs/getting-started.html). 
+3. Open two terminals and run yarn install and yarn start in your root directory/backend and cd client and run yarn install and yarn start in your front end
+
 
 **OR**
 
