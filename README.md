@@ -8,13 +8,13 @@ Assignment 2 Borzillieri/Akpan
 **[View Live Preview](https://safe-refuge-35344.herokuapp.com/)**
 
 ## Tech Requirements
-MongoDB
-Express
-React
-Node.js
-HTML
-CSS
-Javascript
+* MongoDB
+* Express
+* React
+* Node.js
+* HTML/CSS
+* Javascript
+* Bootstrap
 
 
 ## Download, Installation and Usage
@@ -29,7 +29,8 @@ Load the [URL](https://safe-refuge-35344.herokuapp.com/) onto your browser,
 
 
 ## Author
-[Jimmy Borzilleri and Abasiama Akpan](https://github.com/jimfuego/Git-Fit)
+[Jimmy Borzilleri](https://github.com/jimfuego)
+[Abasiama Akpan](https://github.com/abasiamaakpan/ab.github.io)
 
 ## Class Reference 
 [Web Development Spring 2019](http://johnguerra.co/classes/webDevelopment_spring_2019/)
