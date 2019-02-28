@@ -36,10 +36,10 @@ Load the [URL](https://safe-refuge-35344.herokuapp.com/) onto your browser,
 [Web Development Spring 2019](http://johnguerra.co/classes/webDevelopment_spring_2019/)
 
 ## Video Demo
-Demo can be found [here]()
+Demo can be found [here](https://www.youtube.com/watch?v=mMcfo_ReqsE&feature=youtu.be)
 
 ## Google Slides URL
-Slides can be found [here]()
+Slides can be found [here](https://docs.google.com/presentation/d/13-bPP0L1G6VxuffoHv7hZX-VHVimN6kQn-ItgTlRwb0/edit#slide=id.gcb9a0b074_1_0)
 
 ## Copyright and License
 Code released under the [MIT](https://github.com/facebook/react/blob/master/LICENSE) license.
