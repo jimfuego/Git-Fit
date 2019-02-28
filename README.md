@@ -28,7 +28,7 @@ Git-Fit is an online application that allows users to input and track their fitn
 Load the [URL](https://safe-refuge-35344.herokuapp.com/) onto your browser, 
 
 
-## Author
+## Authors
 * [Jimmy Borzilleri](https://github.com/jimfuego)
 * [Abasiama Akpan](https://github.com/abasiamaakpan)
 
