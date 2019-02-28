@@ -30,7 +30,7 @@ Load the [URL](https://safe-refuge-35344.herokuapp.com/) onto your browser,
 
 ## Author
 * [Jimmy Borzilleri](https://github.com/jimfuego)
-* [Abasiama Akpan](https://github.com/abasiamaakpan/ab.github.io)
+* [Abasiama Akpan](https://github.com/abasiamaakpan)
 
 ## Class Reference 
 [Web Development Spring 2019](http://johnguerra.co/classes/webDevelopment_spring_2019/)
