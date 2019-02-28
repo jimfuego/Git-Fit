@@ -3,7 +3,7 @@ Assignment 2 Borzillieri/Akpan
 
 ## Preview
 
-![App Preview](Git-Fit/client/public/img/gym.jpg) 
+![App Preview](client/public/img/gym.jpg) 
 
 **[View Live Preview](https://safe-refuge-35344.herokuapp.com/)**
 
