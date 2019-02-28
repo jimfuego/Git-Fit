@@ -1,2 +1,2 @@
 # Git-Fit
-Assingment 2 Borzillieri/Akpan
+Assignment 2 Borzillieri/Akpan
