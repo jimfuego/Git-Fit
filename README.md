@@ -10,16 +10,12 @@ Assignment 2 Borzillieri/Akpan
 **[View Live Preview](https://safe-refuge-35344.herokuapp.com/)**
 
 ## Tech Requirements
-* HTML5
-* CSS3
-* JavaScript
-* Bootstrap
-* JQuery
-* Git (Github)
+
 
 
 ## Download, Installation and Usage
-
+1. Clone the repository on your device
+2. Make sure to have 
 
 **OR**
 
