@@ -43,3 +43,4 @@ Slides can be found [here](https://docs.google.com/presentation/d/13-bPP0L1G6Vxu
 
 ## Copyright and License
 Code released under the [MIT](https://github.com/facebook/react/blob/master/LICENSE) license.
+Do some code review.
